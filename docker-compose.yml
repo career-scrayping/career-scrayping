@@ -1,0 +1,13 @@
+version: '3'
+services:
+    web:
+        build: .
+        container_name: "web-scrayping"
+        command: python3 app/app.py
+        volumes:
+            - ./app:/app
+        ports:
+            - 5000:5000
+        # 下二行は-itと同じ役割
+        tty: true
+        stdin_open: true
