@@ -7,7 +7,7 @@ services:
         volumes:
             - ./app:/app
         ports:
-            - 5000:5000
+            - 5001:5000 # 後藤の環境だと5000が占有されてるので5001を使用
         # 下二行は-itと同じ役割
         tty: true
         stdin_open: true
